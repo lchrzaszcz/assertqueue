@@ -8,8 +8,8 @@ public class InMemoryQueueConsumer implements QueueConsumer, AutoCloseable {
         this.receivedMessages = receivedMessages;
     }
 
-    public void sendMessage(String message) {
-        receivedMessages.addReceivedMessage(message);
+    public void sendMessage(String key, String message) {
+        receivedMessages.addReceivedMessage(key, message);
     }
 
     @Override
